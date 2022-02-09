@@ -1,25 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import useTheme, { themes } from "./ThemeContext"
+import styled from 'styled-components';
+import { ThemeProvider } from "./ThemeContext";
+import Button from "./components/Button.js"
+import ThemeLabel from './components/ThemeLabel';
+
 
 function App() {
+  const { theme } = useTheme();
+  console.log(theme.backgroundColor)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <StyledDiv color={theme.backgroundColor} className="App">
+        <Button></Button>
+        <ThemeLabel></ThemeLabel>
+      </StyledDiv>
+    </ThemeProvider>
   );
 }
 
 export default App;
+
+const StyledDiv = styled.div`
+  background: ${(props) => props.color}
+  height: 100vh;
+`;
