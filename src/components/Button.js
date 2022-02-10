@@ -37,6 +37,7 @@ const StyledButton = styled.button`
   justify-self: center;
   cursor: pointer;
   margin: auto;
+  /* margin-top: 200px; */
 `;
 
 // const StyledDiv = styled.div`

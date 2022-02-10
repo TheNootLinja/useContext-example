@@ -21,4 +21,6 @@ const StyledPara = styled.p`
     color: ${(props) => props.color};
     font-weight: bold;
     font-family: Segoe UI, sans-serif;
+    width: fit-content;
+    margin: 30px auto 0 auto;
 `

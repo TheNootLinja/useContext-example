@@ -1,9 +1,10 @@
 import './App.css';
 import useTheme, { themes } from "./ThemeContext"
-import styled from 'styled-components';
 import { ThemeProvider } from "./ThemeContext";
 import Button from "./components/Button.js"
 import ThemeLabel from './components/ThemeLabel';
+import Container from './components/Container'
+import ThemePicker from './components/ThemePicker';
 
 
 function App() {
@@ -11,17 +12,13 @@ function App() {
   console.log(theme.backgroundColor)
   return (
     <ThemeProvider>
-      <StyledDiv color={theme.backgroundColor} className="App">
+      <Container>
+        <ThemePicker/>
         <Button></Button>
         <ThemeLabel></ThemeLabel>
-      </StyledDiv>
+      </Container>
     </ThemeProvider>
   );
 }
 
 export default App;
-
-const StyledDiv = styled.div`
-  background: ${(props) => props.color}
-  height: 100vh;
-`;
