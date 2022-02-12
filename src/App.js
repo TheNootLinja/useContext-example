@@ -1,6 +1,6 @@
 import './App.css';
-import useTheme, { themes } from "./ThemeContext"
 import { ThemeProvider } from "./ThemeContext";
+import ThemeTitle from './components/ThemeTitle';
 import Button from "./components/Button.js"
 import ThemeLabel from './components/ThemeLabel';
 import Container from './components/Container'
@@ -11,6 +11,7 @@ function App() {
   return (
     <ThemeProvider>
       <Container>
+        <ThemeTitle></ThemeTitle>
         <ThemePicker/>
         <Button></Button>
         <ThemeLabel></ThemeLabel>

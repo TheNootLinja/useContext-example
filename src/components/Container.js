@@ -17,6 +17,6 @@ const StyledDiv = styled.div`
     background: ${(props) => props.bgColor};
     height: 100vh;
     width: 100vw;
-    padding-top: 42vh;
+    padding-top: 36vh;
     box-sizing: border-box;
 `;
