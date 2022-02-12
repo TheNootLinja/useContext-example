@@ -8,8 +8,6 @@ import ThemePicker from './components/ThemePicker';
 
 
 function App() {
-  const { theme } = useTheme();
-  console.log(theme.backgroundColor)
   return (
     <ThemeProvider>
       <Container>

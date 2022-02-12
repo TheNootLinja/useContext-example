@@ -9,7 +9,7 @@ const ThemeLabel = () => {
   return (
   <StyledPara color={theme.textColor}>
     {/* Setting the text dynamically based on which theme is applied */}
-    The theme is currently the {theme === themes.light ? "light" : theme === themes.dark ? "dark" : ''} theme!
+    The theme is currently the <StyledSpan>{theme.name}</StyledSpan> theme!
   </StyledPara>
   );
 };
@@ -23,4 +23,9 @@ const StyledPara = styled.p`
     font-family: Segoe UI, sans-serif;
     width: fit-content;
     margin: 30px auto 0 auto;
-`
+`;
+
+const StyledSpan = styled.span`
+    color: orange;
+    font-size: 20px;
+`;

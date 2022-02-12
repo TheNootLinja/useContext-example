@@ -6,12 +6,16 @@ const ThemePicker = () => {
   const { theme, setTheme } = useTheme();
   return (
     <StyledDiv color={theme.textColor}>
-        <label for="dog-names">Choose a dog name:</label>
-        <select name="dog-names" id="dog-names">
-            <option value="Light">Light</option>
+        <label htmlFor="themes">Choose a theme:</label>
+        <StyledSelect onChange={(e) => {
+          const themeChoice = e.target.value.toLowerCase();
+          setTheme(themes[themeChoice]);
+          }
+        } name="themes" id="themes" value={theme.name}>
             <option value="Dark">Dark</option>
+            <option value="Light">Light</option>
             <option value="Cyberpunk">Cyberpunk</option>
-        </select>
+        </StyledSelect>
     </StyledDiv>
   )
 }
@@ -24,4 +28,8 @@ const StyledDiv = styled.div`
     margin: auto;
     margin-bottom: 30px;
     color: ${(props) => props.color}
+`;
+
+const StyledSelect = styled.select`
+    font-size: 16px
 `;

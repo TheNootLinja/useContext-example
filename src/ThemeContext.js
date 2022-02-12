@@ -3,14 +3,25 @@ import React, { useState, createContext, useContext } from 'react';
 // Defining out light and dark themes
 export const themes = {
     light: {
+        name: "Light",
+        message: "Turn off the lights!",
         textColor: "#000000",
         backgroundColor: "#fff",
-        btnbackground: "#b4d455"
+        btnbackground: "#ccc"
     },
     dark: {
+        name: "Dark",
+        message: "Turn on the neon!",
         textColor: "#ffffff",
         backgroundColor: "#000",
         btnbackground: "#222222"
+    },
+    cyberpunk: {
+        name: "Cyberpunk",
+        message: "Turn on the lights!",
+        textColor: "#fe75fe",
+        backgroundColor: "#120458",
+        btnbackground: "#7a04eb"
     }
 };
 

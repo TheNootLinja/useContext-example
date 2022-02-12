@@ -15,9 +15,9 @@ const Button = () => {
         background={theme.btnbackground}
         // checking what theme is equal to and then switch to other them
         // based on current value
-        onClick={() => setTheme(theme === themes.light ? themes.dark : themes.light)}
+        onClick={() => setTheme(theme === themes.light ? themes.dark : theme === themes.dark ? themes.cyberpunk : themes.light)}
         >
-          I am styled by theme context!
+          {theme.message}
         </StyledButton>
   )
 };
