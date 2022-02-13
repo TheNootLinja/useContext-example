@@ -9,7 +9,7 @@ const ThemeLabel = () => {
   return (
   <StyledPara color={theme.textColor}>
     {/* Setting the text dynamically based on which theme is applied */}
-    The theme is currently the <StyledSpan>{theme.name}</StyledSpan> theme!
+    This is the <StyledSpan>{theme.name}</StyledSpan> theme!
   </StyledPara>
   );
 };

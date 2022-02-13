@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import useTheme, { themes } from "../ThemeContext"
+import useTheme from "../ThemeContext"
 
 
 const ThemeTitle = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
   return (
     <StyledHeader color={theme.textColor}>{theme.name}</StyledHeader>
   )
@@ -12,6 +12,7 @@ const ThemeTitle = () => {
 
 export default ThemeTitle
 
+// Defining a styled h1 component
 const StyledHeader = styled.h1`
   color: ${(props) => props.color};
   margin: 0 auto 50px auto;

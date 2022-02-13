@@ -1,6 +1,6 @@
 import React, { useState, createContext, useContext } from 'react';
 
-// Defining out light and dark themes
+// Defining theme objects and their properties
 export const themes = {
     light: {
         name: "Light",
